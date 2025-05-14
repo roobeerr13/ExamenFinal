@@ -1,5 +1,5 @@
 import gradio as gr
-from src.proceso import Proceso  # Importación corregida
+from src.proceso import Proceso
 from src.repositorio import RepositorioProcesos
 from src.fcfs_scheduler import FCFSScheduler
 from src.round_robin_scheduler import RoundRobinScheduler
@@ -14,7 +14,7 @@ repo = RepositorioProcesos()
 
 def agregar_proceso(pid, duracion, prioridad):
     try:
-        proceso = proceso(pid, int(duracion), int(prioridad))
+        proceso = Proceso(pid, int(duracion), int(prioridad))
         repo.agregar_proceso(proceso)
         return "Proceso agregado exitosamente."
     except ValueError as e:

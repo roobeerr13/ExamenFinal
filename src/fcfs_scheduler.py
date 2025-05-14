@@ -1,9 +1,9 @@
 from typing import List, Tuple
-from src.proceso import procesos
+from src.proceso import Proceso  # Importación corregida
 from src.scheduler import Scheduler, GanttEntry
 
 class FCFSScheduler(Scheduler):
-    def planificar(self, procesos: List[procesos]) -> List[GanttEntry]:
+    def planificar(self, procesos: List[Proceso]) -> List[GanttEntry]:
         gantt = []
         tiempo_actual = 0
         for proceso in procesos:
