@@ -1,5 +1,5 @@
 from typing import List, Tuple
-from src.procesos import procesos
+from src.proceso import procesos
 from src.scheduler import Scheduler, GanttEntry
 
 class RoundRobinScheduler(Scheduler):

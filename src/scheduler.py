@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import List
-from src.procesos import procesos
+from src.proceso import procesos
 
 GanttEntry = tuple[str, int, int]
 

@@ -1,5 +1,5 @@
 import pytest
-from src.procesos import procesos
+from src.proceso import procesos
 from src.fcfs_scheduler import FCFSScheduler
 from src.round_robin_scheduler import RoundRobinScheduler
 
