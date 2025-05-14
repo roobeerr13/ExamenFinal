@@ -1,5 +1,5 @@
 import gradio as gr
-from src.proceso import proceso  # Importación corregida
+from src.proceso import Proceso  # Importación corregida
 from src.repositorio import RepositorioProcesos
 from src.fcfs_scheduler import FCFSScheduler
 from src.round_robin_scheduler import RoundRobinScheduler
