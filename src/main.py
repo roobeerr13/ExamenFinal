@@ -1,6 +1,7 @@
-from src.proceso import Proceso
+from src.procesos import procesos
 from src.repositorio import RepositorioProcesos
-from src.scheduler import FCFSScheduler, RoundRobinScheduler
+from src.fcfs_scheduler import FCFSScheduler
+from src.round_robin_scheduler import RoundRobinScheduler
 from src.metrics import Metrics
 
 def main():
@@ -23,7 +24,7 @@ def main():
             duracion = int(input("Duración: "))
             prioridad = int(input("Prioridad: "))
             try:
-                repo.agregar_proceso(Proceso(pid, duracion, prioridad))
+                repo.agregar_proceso(procesos(pid, duracion, prioridad))
                 print("Proceso agregado")
             except ValueError as e:
                 print(f"Error: {e}")

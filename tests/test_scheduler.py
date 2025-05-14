@@ -1,11 +1,12 @@
 import pytest
-from src.proceso import Proceso
-from src.scheduler import FCFSScheduler, RoundRobinScheduler
+from src.procesos import procesos
+from src.fcfs_scheduler import FCFSScheduler
+from src.round_robin_scheduler import RoundRobinScheduler
 
 def test_fcfs_scheduler():
     procesos = [
-        Proceso("P1", 3, 1),
-        Proceso("P2", 2, 2)
+        procesos("P1", 3, 1),
+        procesos("P2", 2, 2)
     ]
     scheduler = FCFSScheduler()
     gantt = scheduler.planificar(procesos)
@@ -15,8 +16,8 @@ def test_fcfs_scheduler():
 
 def test_round_robin_scheduler():
     procesos = [
-        Proceso("P1", 4, 1),
-        Proceso("P2", 3, 2)
+        procesos("P1", 4, 1),
+        procesos("P2", 3, 2)
     ]
     scheduler = RoundRobinScheduler(quantum=2)
     gantt = scheduler.planificar(procesos)

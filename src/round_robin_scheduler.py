@@ -1,5 +1,5 @@
 from typing import List, Tuple
-from src.proceso import Proceso
+from src.procesos import procesos
 from src.scheduler import Scheduler, GanttEntry
 
 class RoundRobinScheduler(Scheduler):
@@ -8,7 +8,7 @@ class RoundRobinScheduler(Scheduler):
             raise ValueError("Quantum debe ser positivo")
         self.quantum = quantum
 
-    def planificar(self, procesos: List[Proceso]) -> List[GanttEntry]:
+    def planificar(self, procesos: List[procesos]) -> List[GanttEntry]:
         gantt = []
         tiempo_actual = 0
         cola = [(p, p.duracion) for p in procesos]
